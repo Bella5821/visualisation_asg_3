@@ -5,6 +5,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/9.2.2/highcharts.js"></script>
   <link href="style.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -144,6 +145,41 @@
       <div class="melbourne_des">
         You'll notice that Melburnians have a lot of obsessions, most notably coffee, sport, and food. This is great for visitors, as it results in a city that constantly strives for the best. It's evident in the espresso-scented laneways, as baristas grind for that perfect espresso; or in the thousands of flavor combinations that come out of kitchens that encompass cuisines from around the globe, thanks to the city's proud multicultural heritage.
       </div>
+<!--       chart tab zpy-->
+      <br>
+      <div>
+        <br>
+        <h3>Most livable cities ranking</h3>
+        <br>
+        <div class="tab">
+          <button class="tablinks" onclick="filterType(event, 'overall')" id="defaultOpens">Overall rating</button>
+          <button class="tablinks" onclick="filterType(event, 'Stability')">Stability</button>
+          <button class="tablinks" onclick="filterType(event, 'Healthcare')">Healthcare</button>
+          <button class="tablinks" onclick="filterType(event, 'Culture')">Culture & Environment</button>
+          <button class="tablinks" onclick="filterType(event, 'Education')">Education</button>
+          <button class="tablinks" onclick="filterType(event, 'Infrastructure')">Infrastructure</button>
+        </div>
+
+        <div id="overall" class="tabcontentchart">
+          <div id="chart1" style="min-width:400px;height:400px"></div>
+        </div>
+        <div id="Stability" class="tabcontentchart">
+          <div id="chart2" style="min-width:400px;height:400px"></div>
+        </div>
+        <div id="Healthcare" class="tabcontentchart">
+          <div id="chart3" style="min-width:400px;height:400px"></div>
+        </div>
+        <div id="Culture" class="tabcontentchart">
+          <div id="chart4" style="min-width:400px;height:400px"></div>
+        </div>
+        <div id="Education" class="tabcontentchart">
+          <div id="chart5" style="min-width:400px;height:400px"></div>
+        </div>
+        <div id="Infrastructure" class="tabcontentchart">
+          <div id="chart6" style="min-width:400px;height:400px"></div>
+        </div>
+      </div>
+      
       <br>
       <div class="melbourne_temp">
         <h3>Average monthly max and min temperature</h3>
@@ -967,6 +1003,580 @@ Victoria 3220</p>
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
+/* zpy */
+  //JS functions for tabs:
+  function filterType(evt, status) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontentchart");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(status).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpens").click();
+  
+  var chart = Highcharts.chart('chart1', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: ''
+    },
+    subtitle: {
+        text: ''
+    },
+    xAxis: {
+        categories: ['Brisbane, Australia', 'Melbourne, Australia', 'Geneva, Switzerland', 'Zurich, Switzerland', 'Perth, Australia','Tokyo, Japan','Wellington, New Zealand','Adelaide, Australia','Osaka, Japan','Auckland, New Zealand','Auckland, New Zealand'],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 80,
+        max: 100,
+        title: {
+            text: 'rating',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ' '
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: false,
+                allowOverlap: true 
+            }
+        }
+    },
+legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+/*         x: -40,
+        y: 100, */
+        floating: true,
+        borderWidth: 1,
+        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+        shadow: true
+    },
+    series: [{
+        name: 'Overall rating',
+/*         color: "#246891",
+        data: [ 92.4,92.5,92.5,92.8,93.3,93.7,93.7,94,94.2,96] */
+        data: [
+  {
+    "color": "#ebe1b9",
+    "y": 92.4
+  },
+  {
+    "color": "#00535e",
+    "y": 92.5
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 92.5
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 92.8
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 93.3
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 93.7
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 93.7
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 94
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 94.2
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 96
+  }]
+    }]
+});
+var chart = Highcharts.chart('chart2', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: ''
+    },
+    subtitle: {
+        text: ''
+    },
+    xAxis: {
+        categories: ['Brisbane, Australia', 'Melbourne, Australia', 'Geneva, Switzerland', 'Zurich, Switzerland', 'Perth, Australia','Tokyo, Japan','Wellington, New Zealand','Adelaide, Australia','Osaka, Japan','Auckland, New Zealand','Auckland, New Zealand'],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 80,
+        max: 100,
+        title: {
+            text: 'rating',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ' '
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: false,
+                allowOverlap: true 
+            }
+        }
+    },
+legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        floating: true,
+        borderWidth: 1,
+        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+        shadow: true
+    },
+    series: [{
+        name: 'Stability',
+        data: [
+  {
+    "color": "#ebe1b9",
+    "y": 95
+  },
+  {
+    "color": "#00535e",
+    "y": 95
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 95
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 95
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 95
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 100
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 95
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 95
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 100
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 95
+  }]
+    }]
+});
+var chart = Highcharts.chart('chart3', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: ''
+    },
+    subtitle: {
+        text: ''
+    },
+    xAxis: {
+        categories: ['Brisbane, Australia', 'Melbourne, Australia', 'Geneva, Switzerland', 'Zurich, Switzerland', 'Perth, Australia','Tokyo, Japan','Wellington, New Zealand','Adelaide, Australia','Osaka, Japan','Auckland, New Zealand','Auckland, New Zealand'],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 80,
+        max: 100,
+        title: {
+            text: 'rating',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ' '
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: false,
+                allowOverlap: true 
+            }
+        }
+    },
+legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        floating: true,
+        borderWidth: 1,
+        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+        shadow: true
+    },
+    series: [{
+        name: 'Healthcare',
+        data: [
+  {
+    "color": "#ebe1b9",
+    "y": 100
+  },
+  {
+    "color": "#00535e",
+    "y": 83.3
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 100
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 100
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 100
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 100
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 91.7
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 100
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 100
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 95.8
+  }]
+    }]
+});
+var chart = Highcharts.chart('chart4', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: ''
+    },
+    subtitle: {
+        text: ''
+    },
+    xAxis: {
+        categories: ['Brisbane, Australia', 'Melbourne, Australia', 'Geneva, Switzerland', 'Zurich, Switzerland', 'Perth, Australia','Tokyo, Japan','Wellington, New Zealand','Adelaide, Australia','Osaka, Japan','Auckland, New Zealand','Auckland, New Zealand'],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 80,
+        max: 100,
+        title: {
+            text: 'rating',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ' '
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: false,
+                allowOverlap: true 
+            }
+        }
+    },
+legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        floating: true,
+        borderWidth: 1,
+        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+        shadow: true
+    },
+    series: [{
+        name: 'Culture & Environment',
+        data: [
+  {
+    "color": "#ebe1b9",
+    "y": 85.9
+  },
+  {
+    "color": "#00535e",
+    "y": 88.2
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 84.5
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 85.9
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 78.2
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 84
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 95.1
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 83.8
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 83.1
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 97.9
+  }]
+    }]
+});
+var chart = Highcharts.chart('chart5', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: ''
+    },
+    subtitle: {
+        text: ''
+    },
+    xAxis: {
+        categories: ['Brisbane, Australia', 'Melbourne, Australia', 'Geneva, Switzerland', 'Zurich, Switzerland', 'Perth, Australia','Tokyo, Japan','Wellington, New Zealand','Adelaide, Australia','Osaka, Japan','Auckland, New Zealand','Auckland, New Zealand'],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 80,
+        max: 100,
+        title: {
+            text: 'rating',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ' '
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: false,
+                allowOverlap: true 
+            }
+        }
+    },
+legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        floating: true,
+        borderWidth: 1,
+        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+        shadow: true
+    },
+    series: [{
+        name: 'Education',
+        data: [
+  {
+    "color": "#ebe1b9",
+    "y": 100
+  },
+  {
+    "color": "#00535e",
+    "y": 100
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 83.3
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 83.3
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 100
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 91.7
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 100
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 100
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 91.7
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 100
+  }]
+    }]
+});
+var chart = Highcharts.chart('chart6', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: ''
+    },
+    subtitle: {
+        text: ''
+    },
+    xAxis: {
+        categories: ['Brisbane, Australia', 'Melbourne, Australia', 'Geneva, Switzerland', 'Zurich, Switzerland', 'Perth, Australia','Tokyo, Japan','Wellington, New Zealand','Adelaide, Australia','Osaka, Japan','Auckland, New Zealand','Auckland, New Zealand'],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 80,
+        max: 100,
+        title: {
+            text: 'rating',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ' '
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: false,
+                allowOverlap: true 
+            }
+        }
+    },
+legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        floating: true,
+        borderWidth: 1,
+        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+        shadow: true
+    },
+    series: [{
+        name: 'Infrastructure',
+        data: [
+  {
+    "color": "#ebe1b9",
+    "y": 85.7
+  },
+  {
+    "color": "#00535e",
+    "y": 100
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 96.4
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 96.4
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 100
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 92.9
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 89.3
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 96.4
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 96.4
+  },
+  {
+    "color": "#ebe1b9",
+    "y": 92.9
+  }]
+    }]
+});
 
 $(document).ready(function() {
   checkWeather(); //After page load this function called
