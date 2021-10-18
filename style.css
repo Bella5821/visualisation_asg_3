@@ -242,3 +242,45 @@ html {
   width: 300px;
   object-fit: cover;
 }
+
+/* zpy */
+.tab {
+  overflow: hidden;
+  margin: auto;
+  background-color: #E5E5E5;
+  width: 785px;
+  display: flex;
+  justify-content: space-evenly;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.tab button {
+  background-color: inherit;
+  float: center;
+  border: 2px solid #E5E5E5;
+  border-bottom: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 21px;
+  transition: 0.3s;
+  font-family: Avenir, "Century Gothic", sans-serif;
+  font-size: 15px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #FFFFFF;
+}
+
+.tabcontentchart {
+  display: none;
+  padding: 6px 12px;
+  margin: auto;
+  width: 785px;
+}
