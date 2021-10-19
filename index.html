@@ -146,11 +146,14 @@
         You'll notice that Melburnians have a lot of obsessions, most notably coffee, sport, and food. This is great for visitors, as it results in a city that constantly strives for the best. It's evident in the espresso-scented laneways, as baristas grind for that perfect espresso; or in the thousands of flavor combinations that come out of kitchens that encompass cuisines from around the globe, thanks to the city's proud multicultural heritage.
       </div>
 <!--       chart tab zpy-->
-      <br>
       <div>
-        <br>
-        <h3>Most livable cities ranking</h3>
-        <br>
+      </div>
+        
+
+      <div>
+      <br>
+      <h3>Most livable cities ranking</h3>
+      <br>
         <div class="tab">
           <button class="tablinks" onclick="filterType(event, 'overall')" id="defaultOpens">Overall rating</button>
           <button class="tablinks" onclick="filterType(event, 'Stability')">Stability</button>
@@ -1035,7 +1038,16 @@ document.getElementById("defaultOpen").click();
         categories: ['Brisbane, Australia', 'Melbourne, Australia', 'Geneva, Switzerland', 'Zurich, Switzerland', 'Perth, Australia','Tokyo, Japan','Wellington, New Zealand','Adelaide, Australia','Osaka, Japan','Auckland, New Zealand','Auckland, New Zealand'],
         title: {
             text: null
-        }
+        },
+        labels: {
+	          formatter: function () {
+            	return this.value
+            },
+	          style: {
+							fontSize:'15px',
+						}
+	      },
+       
     },
     yAxis: {
         min: 80,
@@ -1060,15 +1072,7 @@ document.getElementById("defaultOpen").click();
         }
     },
 legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'top',
-/*         x: -40,
-        y: 100, */
-        floating: true,
-        borderWidth: 1,
-        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
-        shadow: true
+        enabled: false
     },
     series: [{
         name: 'Overall rating',
@@ -1131,7 +1135,15 @@ var chart = Highcharts.chart('chart2', {
         categories: ['Brisbane, Australia', 'Melbourne, Australia', 'Geneva, Switzerland', 'Zurich, Switzerland', 'Perth, Australia','Tokyo, Japan','Wellington, New Zealand','Adelaide, Australia','Osaka, Japan','Auckland, New Zealand','Auckland, New Zealand'],
         title: {
             text: null
-        }
+        },
+		labels: {
+	        formatter: function () {
+            	return this.value
+            },
+	        style: {
+				fontSize:'15px',
+			}
+	    },
     },
     yAxis: {
         min: 80,
@@ -1156,13 +1168,7 @@ var chart = Highcharts.chart('chart2', {
         }
     },
 legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'top',
-        floating: true,
-        borderWidth: 1,
-        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
-        shadow: true
+        enabled: false
     },
     series: [{
         name: 'Stability',
@@ -1223,7 +1229,15 @@ var chart = Highcharts.chart('chart3', {
         categories: ['Brisbane, Australia', 'Melbourne, Australia', 'Geneva, Switzerland', 'Zurich, Switzerland', 'Perth, Australia','Tokyo, Japan','Wellington, New Zealand','Adelaide, Australia','Osaka, Japan','Auckland, New Zealand','Auckland, New Zealand'],
         title: {
             text: null
-        }
+        },
+		labels: {
+	        formatter: function () {
+            	return this.value
+            },
+	        style: {
+				fontSize:'15px',
+			}
+	    },
     },
     yAxis: {
         min: 80,
@@ -1248,13 +1262,7 @@ var chart = Highcharts.chart('chart3', {
         }
     },
 legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'top',
-        floating: true,
-        borderWidth: 1,
-        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
-        shadow: true
+        enabled: false
     },
     series: [{
         name: 'Healthcare',
@@ -1315,7 +1323,15 @@ var chart = Highcharts.chart('chart4', {
         categories: ['Brisbane, Australia', 'Melbourne, Australia', 'Geneva, Switzerland', 'Zurich, Switzerland', 'Perth, Australia','Tokyo, Japan','Wellington, New Zealand','Adelaide, Australia','Osaka, Japan','Auckland, New Zealand','Auckland, New Zealand'],
         title: {
             text: null
-        }
+        },
+		labels: {
+	        formatter: function () {
+            	return this.value
+            },
+	        style: {
+				fontSize:'15px',
+			}
+	    },
     },
     yAxis: {
         min: 80,
@@ -1340,13 +1356,7 @@ var chart = Highcharts.chart('chart4', {
         }
     },
 legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'top',
-        floating: true,
-        borderWidth: 1,
-        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
-        shadow: true
+        enabled: false
     },
     series: [{
         name: 'Culture & Environment',
@@ -1407,7 +1417,15 @@ var chart = Highcharts.chart('chart5', {
         categories: ['Brisbane, Australia', 'Melbourne, Australia', 'Geneva, Switzerland', 'Zurich, Switzerland', 'Perth, Australia','Tokyo, Japan','Wellington, New Zealand','Adelaide, Australia','Osaka, Japan','Auckland, New Zealand','Auckland, New Zealand'],
         title: {
             text: null
-        }
+        },
+		labels: {
+	        formatter: function () {
+            	return this.value
+            },
+	        style: {
+				fontSize:'15px',
+			}
+	    },
     },
     yAxis: {
         min: 80,
@@ -1432,13 +1450,7 @@ var chart = Highcharts.chart('chart5', {
         }
     },
 legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'top',
-        floating: true,
-        borderWidth: 1,
-        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
-        shadow: true
+        enabled: false
     },
     series: [{
         name: 'Education',
@@ -1499,7 +1511,15 @@ var chart = Highcharts.chart('chart6', {
         categories: ['Brisbane, Australia', 'Melbourne, Australia', 'Geneva, Switzerland', 'Zurich, Switzerland', 'Perth, Australia','Tokyo, Japan','Wellington, New Zealand','Adelaide, Australia','Osaka, Japan','Auckland, New Zealand','Auckland, New Zealand'],
         title: {
             text: null
-        }
+        },
+		labels: {
+	        formatter: function () {
+            	return this.value
+            },
+	        style: {
+				fontSize:'15px',
+			}
+	    },
     },
     yAxis: {
         min: 80,
@@ -1524,13 +1544,7 @@ var chart = Highcharts.chart('chart6', {
         }
     },
 legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'top',
-        floating: true,
-        borderWidth: 1,
-        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
-        shadow: true
+        enabled: false
     },
     series: [{
         name: 'Infrastructure',
