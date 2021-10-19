@@ -5,10 +5,16 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/9.2.2/highcharts.js"></script>
   <link href="style.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/9.2.2/highcharts.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <meta charset="utf-8">
+  <title>Display navigation directions</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
 </head>
 
 <div class="header-wrap">
@@ -26,9 +32,8 @@
   <!-- tab buttons -->
   <div class="tab_nav">
     <button class="tablink" onclick="openPage('Melbourne', this, '#154c79')" id="defaultOpen">Melbourne</button>
-    <button class="tablink" onclick="openPage('PopularDestinations', this, '#154c79')">Popular Destinations</button>
+    <button class="tablink" onclick="openPage('PorpularDestinations', this, '#154c79')">Porpular Destinations</button>
     <button class="tablink" onclick="openPage('Map', this, '#154c79')">Map</button>
-    <button class="tablink" onclick="openPage('Traffic', this, '#154c79')">Traffic</button>
   </div>
 </div>
 
@@ -145,15 +150,10 @@
       <div class="melbourne_des">
         You'll notice that Melburnians have a lot of obsessions, most notably coffee, sport, and food. This is great for visitors, as it results in a city that constantly strives for the best. It's evident in the espresso-scented laneways, as baristas grind for that perfect espresso; or in the thousands of flavor combinations that come out of kitchens that encompass cuisines from around the globe, thanks to the city's proud multicultural heritage.
       </div>
-<!--       chart tab zpy-->
+            <br>
       <div>
-      </div>
-        
-
-      <div>
-      <br>
-      <h3>Most livable cities ranking</h3>
-      <br>
+        <br>
+        <h4>Most livable cities ranking</h4>
         <div class="tab">
           <button class="tablinks" onclick="filterType(event, 'overall')" id="defaultOpens">Overall rating</button>
           <button class="tablinks" onclick="filterType(event, 'Stability')">Stability</button>
@@ -182,7 +182,6 @@
           <div id="chart6" style="min-width:400px;height:400px"></div>
         </div>
       </div>
-      
       <br>
       <div class="melbourne_temp">
         <h3>Average monthly max and min temperature</h3>
@@ -199,7 +198,7 @@
 
   <!-- poluar destinations page -->
   <!-- slideshow -->
-  <div id="PopularDestinations" class="tabcontent">
+  <div id="PorpularDestinations" class="tabcontent">
     <div class="slideshow-container">
       <div class="mySlides">
         <img src="https://cdn.broadsheet.com.au/cache/59/81/598136c627fb95c03b017eb14472e430.jpg" class="card-img" style="width:100%">
@@ -411,7 +410,7 @@
                         </p>
                       </div>
                       <p class="card-text text-danger">Opens: Tue-Sat, 6pm–10pm,
-  Sun, 12noon–3pm</p>
+                        Sun, 12noon–3pm</p>
                       <p class="card-text"><i class="bi bi-pin-map"></i> 533 Brunswick Street, Fitzroy North, Melbourne</p>
                     </div>
                   </div>
@@ -635,7 +634,7 @@
                         <p class="card-text" style="width:60%;">
                           Feel the bustle and fast pace of the city fall away as you follow the winding road up through the thick, tall forests and cool fern gullies of the Dandenong Ranges.
                         </p>
-                        <p class="card-text text-muted">  
+                        <p class="card-text text-muted">
                         </p>
                       </div>
                       <p class="card-text text-danger">95 kilometres round trip from Melbourne</p>
@@ -670,12 +669,12 @@
                         <p class="card-text" style="width:60%;">
                           Geelong is a city on the move and the signs of change are everywhere, from the stunning waterfront and urban precinct to the craft breweries and hole-in-the-wall cafes that have reclaimed and reshaped the city's old industrial landscape.
                         </p>
-                        <p class="card-text text-muted">  
+                        <p class="card-text text-muted">
                         </p>
                       </div>
                       <p class="card-text text-danger">154 kilometres round trip from Melbourne</p>
                       <p class="card-text"><i class="bi bi-pin-map"></i> Geelong
-Victoria 3220</p>
+                        Victoria 3220</p>
                     </div>
                   </div>
                 </div>
@@ -741,11 +740,10 @@ Victoria 3220</p>
                         <p class="card-text" style="width:60%;">
                           Immerse yourself in truly Big Nature, from the wild and unpredictable Southern Ocean, the intriguing 12 Apostles, vast volcanic plains and national parks steeped in history. Explore villages and seaside towns, hinterland hospitality and fine foodie trails.
                         </p>
-                        <p class="card-text text-muted"> 
+                        <p class="card-text text-muted">
                         </p>
                       </div>
-                      <p class="card-text text-danger">209 kilometres round trip from Melbourne</p>
-                      <!-- <p class="card-text"><i class="bi bi-pin-map"></i> 6500 Tooronga Road, Hawthorn, Melbourne</p> -->
+                      <p class="card-text text-danger">209 kilometres round trip from Melbourne</p> 
                     </div>
                   </div>
                 </div>
@@ -776,11 +774,10 @@ Victoria 3220</p>
                         <p class="card-text" style="width:60%;">
                           You can discover a new hobby or dive into a thrilling aquatic adventure. Uncover your creative side in galleries and parks, play at some of Australia's best golf courses, or slip into natural hot springs. There's so much to discover, so many surprises and so much to enjoy.
                         </p>
-                        <p class="card-text text-muted">         
+                        <p class="card-text text-muted">
                         </p>
                       </div>
                       <p class="card-text text-danger">156 kilometres round trip from Melbourne</p>
-                      <!-- <p class="card-text"><i class="bi bi-pin-map"></i> 6500 Tooronga Road, Hawthorn, Melbourne</p> -->
                     </div>
                   </div>
                 </div>
@@ -817,7 +814,7 @@ Victoria 3220</p>
                         <p class="card-text" style="width:60%;">
                           The National Gallery of Victoria has two magnificent galleries located a short walk apart, both with free entry to the permanent collection.
                         </p>
-                        <p class="card-text text-muted">              
+                        <p class="card-text text-muted">
                         </p>
                       </div>
                       <p class="card-text text-danger">Opens: Mon-Sun, 10am-5pm</p>
@@ -852,7 +849,7 @@ Victoria 3220</p>
                         <p class="card-text" style="width:60%;">
                           For more than 30 years, Arts Centre Melbourne has been Melbourne’s leading venue for world-class theatre, dance, music and more.
                         </p>
-                        <p class="card-text text-muted">                      
+                        <p class="card-text text-muted">
                         </p>
                       </div>
                       <p class="card-text text-danger">Opens: Mon-Sun, 9am-11pm</p>
@@ -887,7 +884,7 @@ Victoria 3220</p>
                         <p class="card-text" style="width:60%;">
                           A visit to Melbourne Museum is a rich insight into life in Victoria. It shows you Victoria's intriguing permanent collections and bring you brilliant temporary exhibitions from near and far. You'll see Victoria's natural environment, cultures and history through different perspectives.
                         </p>
-                        <p class="card-text text-muted">                    
+                        <p class="card-text text-muted">
                         </p>
                       </div>
                       <p class="card-text text-danger">Opens: Mon-Sun, 10am-5pm</p>
@@ -920,9 +917,9 @@ Victoria 3220</p>
                       </div>
                       <div class="d-flex justify-content-between">
                         <p class="card-text" style="width:60%;">
-                          Built in 1854, Melbourne's iconic State Library Victoria is Australia's oldest library. It continues to draw readers, writers, students and lovers of art, literature and architecture to its magnificent spaces. 
+                          Built in 1854, Melbourne's iconic State Library Victoria is Australia's oldest library. It continues to draw readers, writers, students and lovers of art, literature and architecture to its magnificent spaces.
                         </p>
-                        <p class="card-text text-muted">                
+                        <p class="card-text text-muted">
                         </p>
                       </div>
                       <p class="card-text text-danger">Opens: Mon-Sun, 10am-9pm</p>
@@ -958,7 +955,7 @@ Victoria 3220</p>
                           As the towering steel sculptures slowly slide across the Yarra, they literally and figuratively represent the journey made by migrants from all over the world and celebrate their many contributions to the state.
                         </p>
                         <p class="card-text text-muted">
-                          
+
                         </p>
                       </div>
                       <p class="card-text text-danger">Opens: Mon-Sun, 24hs</p>
@@ -975,12 +972,26 @@ Victoria 3220</p>
   </div>
   <!-- map page -->
   <div id="Map" class="tabcontent">
-    <h2>Map</h2>
-  </div>
 
-  <!-- traffic page -->
-  <div id="Traffic" class="tabcontent">
-    <h2>Traffic</h2>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
+    <div class="lunacontainer">
+      <div id="map"></div>
+      <div class="map-overlay" id="legend"></div>
+      <nav id="buttons" ></nav>
+      <div class="map-overlay" id="title">
+        <h2>POI and traffic in Melbourne</h2>
+        <div id="info">
+          <p>Click a point to view details.</p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="locations">
+      <div id="location_info">
+        Point of interest (POI) details
+      </div>
+    </div>
   </div>
 </div>
 
@@ -988,8 +999,11 @@ Victoria 3220</p>
 
 
 
+
+
+
   <script>
- function openPage(pageName,elmnt,color) {
+ function openPage(pageName, elmnt, color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -1007,24 +1021,259 @@ Victoria 3220</p>
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
-/* zpy */
-  //JS functions for tabs:
-  function filterType(evt, status) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontentchart");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(status).style.display = "block";
-    evt.currentTarget.className += " active";
+
+$(document).ready(function() {
+  checkWeather(); //After page load this function called
+  forecast();
+});
+
+
+// Get today date
+window.onload = setInterval(clock, 1000);
+
+function clock() {
+  var d = new Date();
+  var date = d.getDate();
+  var month = d.getMonth();
+  var year = d.getFullYear();
+  var monthArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  month = monthArr[month];
+  document.getElementById("date").innerHTML = "&#160;&#160;" + date + " " + month + ", " + year;
+}
+
+// Melbourne Current Weather
+function checkWeather() {
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "dataType": "json",
+    "url": "https://api.openweathermap.org/data/2.5/weather?units=metric&appid=4ad30193a767b24a98efcad4df422f2e&lat=-37.814&lon=144.9633",
+    "method": "GET"
   }
-  // Get the element with id="defaultOpen" and click on it
-  document.getElementById("defaultOpens").click();
-  
+
+  $.ajax(settings).done(function(response) {
+    //console.log(response);
+
+    $("#main_temp").append(response.main.temp.toFixed(1) + " &#8451;");
+    $("#fl_temp").append(response.main.feels_like.toFixed(1) + " &#8451;&#160;&#160;");
+    $("#weather_des").append(response.weather[0].description);
+  });
+}
+
+// Melbourne Weather Forecast
+function forecast() {
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "dataType": "json",
+    "url": "https://api.openweathermap.org/data/2.5/onecall?lat=-37.814&lon=144.9633&exclude=current,minutely,hourly,alerts&units=metric&appid=4ad30193a767b24a98efcad4df422f2e",
+    "method": "GET"
+  }
+
+  $.ajax(settings).done(function(response) {
+    //console.log(response);
+    const dayname = [];
+    const daytemp = [];
+    const daydes = [];
+    for (var i = 0; i < 7; i++) {
+      var date = new Date(response.daily[i].dt * 1000).toDateString().slice(0, -5);
+      dayname.push(date);
+      var temp = response.daily[i].temp.min.toFixed() + " / " + response.daily[i].temp.max.toFixed() + " &#8451;";
+      daytemp.push(temp);
+      var des = response.daily[i].weather[0].description;
+      daydes.push(des);
+    }
+
+    $("#date1").append(dayname[0]);
+    $("#date1_temp").append(daytemp[0]);
+    $("#date1_des").append(daydes[0]);
+
+    $("#date2").append(dayname[1]);
+    $("#date2_temp").append(daytemp[1]);
+    $("#date2_des").append(daydes[1]);
+
+    $("#date3").append(dayname[2]);
+    $("#date3_temp").append(daytemp[2]);
+    $("#date3_des").append(daydes[2]);
+
+    $("#date4").append(dayname[3]);
+    $("#date4_temp").append(daytemp[3]);
+    $("#date4_des").append(daydes[3]);
+
+    $("#date5").append(dayname[4]);
+    $("#date5_temp").append(daytemp[4]);
+    $("#date5_des").append(daydes[4]);
+
+    $("#date6").append(dayname[5]);
+    $("#date6_temp").append(daytemp[5]);
+    $("#date6_des").append(daydes[5]);
+
+    $("#date7").append(dayname[6]);
+    $("#date7_temp").append(daytemp[6]);
+    $("#date7_des").append(daydes[6]);
+  });
+}
+
+let tableTemp = [{
+    "month": "Jan",
+    "Mean maximum temperature": 27,
+    "Mean minimum temperature": 16.1
+  },
+  {
+    "month": "Feb",
+    "Mean maximum temperature": 26.9,
+    "Mean minimum temperature": 16.4
+  },
+  {
+    "month": "Mar",
+    "Mean maximum temperature": 24.6,
+    "Mean minimum temperature": 14.6
+  },
+  {
+    "month": "Apr",
+    "Mean maximum temperature": 21.1,
+    "Mean minimum temperature": 11.8
+  },
+  {
+    "month": "May",
+    "Mean maximum temperature": 17.6,
+    "Mean minimum temperature": 9.8
+  },
+  {
+    "month": "Jun",
+    "Mean maximum temperature": 15.1,
+    "Mean minimum temperature": 8.2
+  },
+  {
+    "month": "Jul",
+    "Mean maximum temperature": 14.5,
+    "Mean minimum temperature": 7.5
+  },
+  {
+    "month": "Aug",
+    "Mean maximum temperature": 15.9,
+    "Mean minimum temperature": 7.9
+  },
+  {
+    "month": "Sep",
+    "Mean maximum temperature": 18.1,
+    "Mean minimum temperature": 9.4
+  },
+  {
+    "month": "Oct",
+    "Mean maximum temperature": 20.5,
+    "Mean minimum temperature": 10.9
+  },
+  {
+    "month": "Nov",
+    "Mean maximum temperature": 22.9,
+    "Mean minimum temperature": 12.8
+  },
+  {
+    "month": "Dec",
+    "Mean maximum temperature": 24.8,
+    "Mean minimum temperature": 14.3
+  }
+]
+
+// Temp Chart
+let chartTemp = new Chart('chartTemp', {
+  type: 'line',
+  data: {
+    datasets: [{
+        label: 'Max',
+        data: tableTemp,
+        parsing: {
+          xAxisKey: 'month',
+          yAxisKey: 'Mean maximum temperature'
+        },
+        borderColor: "#de3930",
+        backgroundColor: 'rgba(222,57,48,0.5)',
+        pointBackgroundColor: 'rgb(222,57,48)',
+        tension: 0.3,
+        fill: '1',
+
+      },
+      {
+        label: 'Min',
+        data: tableTemp,
+        parsing: {
+          xAxisKey: 'month',
+          yAxisKey: 'Mean minimum temperature'
+        },
+        borderColor: "#40b8e4",
+        backgroundColor: 'rgba(64, 184, 228, 0.5)',
+        pointBackgroundColor: 'rgb(64, 184, 228)',
+        tension: 0.3,
+        fill: 'origin',
+      }
+    ]
+  },
+  options: {
+    scales: {
+      x: {
+        grid: {
+          display: false
+        },
+        ticks: {},
+        title: {}
+      },
+      y: {
+        grid: {
+          display: false,
+        },
+        beginAtZero: true,
+        ticks: {
+          callback: function(value) {
+            return value + '°C';
+          }
+        },
+        title: {},
+      }
+    },
+    animation: {},
+    plugins: {
+      legend: {
+        labels: {
+          usePointStyle: true,
+          font: {
+            size: 14
+          }
+        }
+      },
+      title: {},
+      tooltip: {
+        xAlign: 'center',
+        yAlign: 'bottom',
+        titleAlign: 'center',
+        bodyAlign: 'center',
+        callbacks: {
+          label: context => Number(context.parsed.y) + '°C'
+        }
+      }
+    }
+  }
+});
+
+// bar chart for most livable cities
+//JS functions for tabs:
+function filterType(evt, status) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontentchart");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(status).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpens").click();
+
   var chart = Highcharts.chart('chart1', {
     chart: {
         type: 'bar'
@@ -1041,13 +1290,13 @@ document.getElementById("defaultOpen").click();
             text: null
         },
         labels: {
-	          formatter: function () {
-            	return this.value
+            formatter: function () {
+              return this.value
             },
-	          style: {
-							fontSize:'15px',
-						}
-	      },
+            style: {
+              fontSize:'15px',
+            }
+        },
        
     },
     yAxis: {
@@ -1137,14 +1386,14 @@ var chart = Highcharts.chart('chart2', {
         title: {
             text: null
         },
-		labels: {
-	        formatter: function () {
-            	return this.value
+    labels: {
+          formatter: function () {
+              return this.value
             },
-	        style: {
-				fontSize:'15px',
-			}
-	    },
+          style: {
+        fontSize:'15px',
+      }
+      },
     },
     yAxis: {
         min: 80,
@@ -1231,14 +1480,14 @@ var chart = Highcharts.chart('chart3', {
         title: {
             text: null
         },
-		labels: {
-	        formatter: function () {
-            	return this.value
+    labels: {
+          formatter: function () {
+              return this.value
             },
-	        style: {
-				fontSize:'15px',
-			}
-	    },
+          style: {
+        fontSize:'15px',
+      }
+      },
     },
     yAxis: {
         min: 80,
@@ -1325,14 +1574,14 @@ var chart = Highcharts.chart('chart4', {
         title: {
             text: null
         },
-		labels: {
-	        formatter: function () {
-            	return this.value
+    labels: {
+          formatter: function () {
+              return this.value
             },
-	        style: {
-				fontSize:'15px',
-			}
-	    },
+          style: {
+        fontSize:'15px',
+      }
+      },
     },
     yAxis: {
         min: 80,
@@ -1419,14 +1668,14 @@ var chart = Highcharts.chart('chart5', {
         title: {
             text: null
         },
-		labels: {
-	        formatter: function () {
-            	return this.value
+    labels: {
+          formatter: function () {
+              return this.value
             },
-	        style: {
-				fontSize:'15px',
-			}
-	    },
+          style: {
+        fontSize:'15px',
+      }
+      },
     },
     yAxis: {
         min: 80,
@@ -1513,14 +1762,14 @@ var chart = Highcharts.chart('chart6', {
         title: {
             text: null
         },
-		labels: {
-	        formatter: function () {
-            	return this.value
+    labels: {
+          formatter: function () {
+              return this.value
             },
-	        style: {
-				fontSize:'15px',
-			}
-	    },
+          style: {
+        fontSize:'15px',
+      }
+      },
     },
     yAxis: {
         min: 80,
@@ -1593,242 +1842,7 @@ legend: {
     }]
 });
 
-$(document).ready(function() {
-  checkWeather(); //After page load this function called
-  forecast();
-});
-
-
-// Get today date
-window.onload = setInterval(clock, 1000);
-
-function clock() {
-  var d = new Date();
-  var date = d.getDate();
-  var month = d.getMonth();
-  var year = d.getFullYear();
-  var monthArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  month = monthArr[month];
-  document.getElementById("date").innerHTML = "&#160;&#160;" + date + " " + month + ", " + year;
-}
-
-// Melbourne Current Weather
-function checkWeather() {
-  var settings = {
-    "async": true,
-    "crossDomain": true,
-    "dataType": "json",
-    "url": "https://api.openweathermap.org/data/2.5/weather?units=metric&appid=4ad30193a767b24a98efcad4df422f2e&lat=-37.814&lon=144.9633",
-    "method": "GET"
-  }
-
-  $.ajax(settings).done(function(response) {
-    //console.log(response);
-
-    $("#main_temp").append(response.main.temp.toFixed(1) + " &#8451;");
-    $("#fl_temp").append(response.main.feels_like.toFixed(1) + " &#8451;&#160;&#160;");
-    $("#weather_des").append(response.weather[0].description);
-  });
-}
-
-// Melbourne Weather Forecast
-function forecast() {
-  var settings = {
-    "async": true,
-    "crossDomain": true,
-    "dataType": "json",
-    "url": "https://api.openweathermap.org/data/2.5/onecall?lat=-37.814&lon=144.9633&exclude=current,minutely,hourly,alerts&units=metric&appid=4ad30193a767b24a98efcad4df422f2e",
-    "method": "GET"
-  }
-
-  $.ajax(settings).done(function(response) {
-    //console.log(response);
-    const dayname = [];
-    const daytemp = [];
-    const daydes = [];
-    for (var i = 0; i < 7; i++) {
-      var date = new Date(response.daily[i].dt * 1000).toDateString().slice(0, -5);
-      dayname.push(date);
-      var temp = response.daily[i].temp.min.toFixed()  + " / " + response.daily[i].temp.max.toFixed() + " &#8451;";
-      daytemp.push(temp);
-      var des = response.daily[i].weather[0].description;
-      daydes.push(des);
-    }
-    
-    $("#date1").append(dayname[0]);
-    $("#date1_temp").append(daytemp[0]);
-    $("#date1_des").append(daydes[0]);
-    
-    $("#date2").append(dayname[1]);
-    $("#date2_temp").append(daytemp[1]);
-    $("#date2_des").append(daydes[1]);
-    
-    $("#date3").append(dayname[2]);
-    $("#date3_temp").append(daytemp[2]);
-    $("#date3_des").append(daydes[2]);
-    
-    $("#date4").append(dayname[3]);
-    $("#date4_temp").append(daytemp[3]);
-    $("#date4_des").append(daydes[3]);
-    
-    $("#date5").append(dayname[4]);
-    $("#date5_temp").append(daytemp[4]);
-    $("#date5_des").append(daydes[4]);
-    
-    $("#date6").append(dayname[5]);
-    $("#date6_temp").append(daytemp[5]);
-    $("#date6_des").append(daydes[5]);
-    
-    $("#date7").append(dayname[6]);
-    $("#date7_temp").append(daytemp[6]);
-    $("#date7_des").append(daydes[6]);
-  });
-}
-
-let tableTemp = [
-  {
-    "month": "Jan",
-    "Mean maximum temperature": 27,
-    "Mean minimum temperature": 16.1
-  },
-  {
-    "month": "Feb",
-    "Mean maximum temperature": 26.9,
-    "Mean minimum temperature": 16.4
-  },
-  {
-    "month": "Mar",
-    "Mean maximum temperature": 24.6,
-    "Mean minimum temperature": 14.6
-  },
-  {
-    "month": "Apr",
-    "Mean maximum temperature": 21.1,
-    "Mean minimum temperature": 11.8
-  },
-  {
-    "month": "May",
-    "Mean maximum temperature": 17.6,
-    "Mean minimum temperature": 9.8
-  },
-  {
-    "month": "Jun",
-    "Mean maximum temperature": 15.1,
-    "Mean minimum temperature": 8.2
-  },
-  {
-    "month": "Jul",
-    "Mean maximum temperature": 14.5,
-    "Mean minimum temperature": 7.5
-  },
-  {
-    "month": "Aug",
-    "Mean maximum temperature": 15.9,
-    "Mean minimum temperature": 7.9
-  },
-  {
-    "month": "Sep",
-    "Mean maximum temperature": 18.1,
-    "Mean minimum temperature": 9.4
-  },
-  {
-    "month": "Oct",
-    "Mean maximum temperature": 20.5,
-    "Mean minimum temperature": 10.9
-  },
-  {
-    "month": "Nov",
-    "Mean maximum temperature": 22.9,
-    "Mean minimum temperature": 12.8
-  },
-  {
-    "month": "Dec",
-    "Mean maximum temperature": 24.8,
-    "Mean minimum temperature": 14.3
-  }
-]
-
-// Temp Chart
-let chartTemp = new Chart('chartTemp', {
-  type: 'line',
-  data: {
-    datasets: [{
-        label: 'Max',
-        data: tableTemp,
-        parsing: {
-          xAxisKey: 'month',
-          yAxisKey: 'Mean maximum temperature'
-        },
-        borderColor: "#de3930",
-        backgroundColor: 'rgba(222,57,48,0.5)',
-        pointBackgroundColor: 'rgb(222,57,48)',
-        tension: 0.3,
-        fill: '1',
-        
-      },
-      {
-        label: 'Min',
-        data: tableTemp,
-        parsing: {
-          xAxisKey: 'month',
-          yAxisKey: 'Mean minimum temperature'
-        },
-        borderColor: "#40b8e4",
-        backgroundColor: 'rgba(64, 184, 228, 0.5)',
-        pointBackgroundColor: 'rgb(64, 184, 228)',
-        tension: 0.3,
-        fill: 'origin',
-      }
-    ]
-  },
-  options: {
-    scales: {
-      x: {
-        grid: {
-          display: false
-        },
-        ticks: {},
-        title: {}
-      },
-      y: {
-        grid: {
-          display: false,
-        },
-        beginAtZero: true,
-        ticks: {
-          callback: function(value) {
-            return value + '°C';
-          }
-        },
-        title: {},
-      }
-    },
-    animation: {},
-    plugins: {
-      legend: {
-        labels: {
-          usePointStyle: true,
-          font: {
-            size: 14
-          }
-        }
-      },
-      title: {},
-      tooltip: {
-        xAlign: 'center',
-        yAlign: 'bottom',
-        titleAlign: 'center',
-        bodyAlign: 'center',
-        callbacks: {
-          label: context => Number(context.parsed.y) + '°C'
-        }
-      }
-    }
-  }
-});
-
-
-// Popular Destinations slides
+// Porpular Destinations slides
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -1845,19 +1859,151 @@ function showSlides(n) {
   var slides = document.getElementsByClassName("mySlides");
   var panels = document.getElementsByClassName("panel-group");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length;}
+  if (n > slides.length) {
+    slideIndex = 1
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-      panels[i].style.display = "none";
+    slides[i].style.display = "none";
+    panels[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  panels[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  slides[slideIndex - 1].style.display = "block";
+  panels[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 }
+
+
+/* map */
+
+let map_url = ''
+
+mapboxgl.accessToken = 'pk.eyJ1Ijoiamlhd2NoZW4yIiwiYSI6ImNrdDNvZzRxZTBpYWUybnJ6bzZkb2lqNHIifQ.zzY39F1IVJ_P5ycj09h2vw';
+let map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/jiawchen2/ckujn8apbbs0d18s0vpts56hh',
+  center: [144.93, -37.81],
+  zoom: 12
+});
+let layers = [{
+    "name": "Leisure/Recreation",
+    "color": "#253494"
+  },
+  {
+    "name": "Place of Worship",
+    "color": "#2c7fb8"
+  },
+  {
+    "name": "Place of Assembly",
+    "color": "#41b6c4"
+  },
+  {
+    "name": "Purpose Built",
+    "color": "#bf812d"
+  },
+  {
+    "name": "Retail",
+    "color": "#8c510a"
+  },
+  {
+    "name": "Community Use",
+    "color": "#93C572"
+  }
+];
+map.on('load', e => {
+  for (let layer of layers) {
+    map.addLayer({
+      "id": layer.name,
+      "type": "circle",
+      "source": {
+        "type": "vector",
+        "url": "mapbox://jiawchen2.7u2ct4pj"
+      },
+      "source-layer": "Adjusted_Landmarks_and_places-4x2kk6",
+      "paint": {
+        "circle-color": layer.color
+      },
+      "filter": ["==", "Theme", layer.name]
+    });
+    // Create legends for the map
+    let legend = document.querySelector('#legend');
+    let item = document.createElement('div');
+    let key = document.createElement('span');
+    key.classList.add('legend-key');
+    key.style.backgroundColor = layer.color;
+    let value = document.createElement('span');
+    value.innerHTML = layer.name;
+    item.appendChild(key);
+    item.appendChild(value);
+    legend.appendChild(item);
+    // Add filter to select different types of data
+    let link = document.createElement('a');
+    link.href = '#';
+    link.classList.add('active');
+    link.textContent = layer.name;
+    link.dataset.layerName = layer.name;
+    link.style.backgroundColor = layer.color;
+    let buttons = document.querySelector('#buttons');
+    buttons.appendChild(link);
+    link.onclick = e => {
+      let clickedLayer = e.target.dataset.layerName;
+      e.preventDefault();
+      e.stopPropagation();
+      let visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+      if (visibility !== 'none') {
+        map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+        e.target.classList.remove('active');
+      } else {
+        e.target.classList.add('active');
+        map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+      }
+    };
+    // Change the icon to a pointer icon when you mouse over a water
+    map.on('mouseenter', layer.name, e => {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+    // Change it back to a pan icon when it leaves.
+    map.on('mouseleave', layer.name, e => {
+      map.getCanvas().style.cursor = '';
+    });
+    // Show a pop-up message digest
+    map.on('click', layer.name, e => {
+      console.log(e.features[0].properties);
+      new mapboxgl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML('<span class="popup-address">' + e.features[0].properties.Feature_Name + '</span><br>Sub-Theme: ' + e.features[0].properties.Sub_Theme + '<br>Co-ordinates: ' + e.features[0].properties.Latitude + ', ' + e.features[0].properties.Longitude)
+        .addTo(map);
+    });
+
+    map.on('click', layer.name, e => {
+      console.log(e.features[0].properties.Feature_Name);
+
+      map_url = 'https://en.wikipedia.org/api/rest_v1/page/summary/' + e.features[0].properties.Feature_Name + '?redirect=true';
+
+      let url = 'https://en.wikipedia.org/api/rest_v1/page/summary/' + e.features[0].properties.Feature_Name + '?redirect=true';
+
+      console.log("hi");
+      console.log(map_url);
+
+      fetch(map_url).then(response => response.json()).then(json => {
+        document.querySelector('#location_info').innerHTML = json.extract_html;
+      });
+    });
+  };
+});
+
+map.addControl(new mapboxgl.ScaleControl());
+map.addControl(
+  new MapboxDirections({
+    accessToken: mapboxgl.accessToken
+  }),
+  "top-right"
+);
+map.addControl(new mapboxgl.NavigationControl(), "bottom-right");
 
 </script>
 
