@@ -1,0 +1,412 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Avenir, "Century Gothic", sans-serif;
+}
+
+/* Style header */
+.header-wrap {
+  position: relative;
+}
+
+.header-wrap:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  background: url("http://www.genkin.org/gallery/australia/melbourne/au-melbourne-0032_l.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  position: relative;
+  font-family: Avenir, "Century Gothic", sans-serif;
+  font-size: 54px;
+  color: white;
+  text-shadow: 0 0 10px black;
+  text-align: center;
+  padding: 2.5em;
+}
+
+.tab_nav {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  max-width: 1500px;
+  bottom: 0px;
+}
+
+/* Style weatherDate button */
+.weatherDate {
+  font-family: Avenir, "Century Gothic", sans-serif;
+  font-size: 16px;
+  background-color: #555;
+  color: white;
+  opacity: 0.7;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 5px;
+}
+
+.weatherDate:hover {
+  background-color: #777;
+}
+
+
+/* Style weatherDate further details */
+#offcanvasRight {
+  background-color: #3a73a1;
+  color: white;
+  width: 400px;
+}
+
+
+#weather_des,
+#date1_des,
+#date2_des,
+#date3_des,
+#date4_des,
+#date5_des,
+#date6_des,
+#date7_des {
+  font-size: 14px;
+}
+
+
+
+/* Style tab links */
+.tab_nav button {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 18px;
+  width: 33.33%;
+  white-space: nowrap;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+
+/* Style the tab content */
+.content {
+  background-color: #154c79;
+}
+
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+  margin: auto;
+  background-color: #154c79;
+}
+
+/* Style the Melbourne slides */
+#Melbourne .container {
+  padding: 50px;
+  color: #00535e;
+  text-align: center;
+  align-content: center;
+  background-color: white;
+  border-radius: 5px;
+}
+
+#Melbourne .container img {
+  width: 100px;
+  height: auto;
+  margin: 0 0 20px 0;
+}
+
+#Melbourne .container .melbourne_info {
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+#Melbourne .container .melbourne_info span {
+  color: white;
+  background-color: #00535e;
+  border-radius: 5px;
+  padding: 4px;
+  margin: auto;
+}
+
+#Melbourne .container .melbourne_des,
+#Melbourne .container .melbourne_weather {
+  color: #555;
+  margin: auto;
+  width: 73%;
+  font-size: 16px;
+}
+
+#Melbourne .container .melbourne_temp {
+  margin-top: 50px;
+}
+
+#Melbourne canvas {
+  width: 600px !important;
+  margin: 0 auto;
+}
+
+    /* Style the bar chart */
+.tab {
+  overflow: hidden;
+  margin: auto;
+  background-color: #E5E5E5;
+  width: 785px;
+  display: flex;
+  justify-content: space-evenly;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.tab button {
+  background-color: inherit;
+  float: center;
+  border: 2px solid #E5E5E5;
+  border-bottom: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 21px;
+  transition: 0.3s;
+  font-family: Avenir, "Century Gothic", sans-serif;
+  font-size: 15px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #FFFFFF;
+}
+
+.tabcontentchart {
+  display: none;
+  padding: 6px 12px;
+  margin: auto;
+  width: 785px;
+}
+
+/* Style the porpular desinations slides*/
+.mySlides {
+  display: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  max-width: 1000px;
+}
+
+.mySlides img {
+  height: 450px;
+  object-fit: cover;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  text-decoration: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-decoration: none;
+}
+
+/* Caption text */
+.mySlides .text {
+  color: #f2f2f2;
+  font-size: 30px;
+  position: absolute;
+  bottom: 30px;
+  left: 18px;
+  right: 18px;
+  text-align: left;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.panel-group {
+  max-width: 1000px;
+  margin: auto;
+  color: black;
+}
+
+.panel-group img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+/* map */
+#map {
+  height: 700px;
+  max-width: 1600px;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.lunacontainer {
+  position: relative;
+  max-width: 1600px;
+  margin: auto;
+}
+
+#Map .map-overlay {
+  position: absolute;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.8);
+  font-family: Arial, sans-serif;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+.layers {
+  opacity: 70%;
+}
+
+#legend {
+  display: none;
+}
+
+#buttons {
+  position: absolute;
+  z-index: 1;
+  top: 120px;
+  left: 20px;
+  border-radius: 5px;
+  width: 120px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  font-family: 'Arial', sans-serif;
+}
+
+#buttons a {
+  font-size: 10px;
+  color: #403333;
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding: 10px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+#buttons a:last-child {
+  border: none;
+}
+
+#buttons a:hover {
+  background-color: #111222;
+  color: #404040;
+}
+
+#buttons a.active {
+  background-color: #111222;
+  color: #ffffff;
+}
+
+#buttons a.active:hover {
+  background: #222333;
+}
+
+#title {
+  top: 0;
+  left: 20px;
+  height: auto;
+  margin-top: 20px;
+  width: 300px;
+}
+
+#title h2 {
+  margin: 10px;
+  font-size: 1.2em;
+  text-align: left;
+  color: black;
+}
+
+#title p {
+  margin: 10px;
+  font-size: 1em;
+  text-align: left;
+  color: black;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: left;
+  font-family: 'Arial', sans-serif;
+  color: black;
+}
+
+.popup-address {
+  color: navy;
+  font-weight: bold;
+}
+
+#location_info {
+  background-color: white;
+  opacity: 0.85;
+  color: gray;
+  padding: 25px;
+  border-radius:5px;
+  max-width: 1600px;
+  margin: auto;
+}
