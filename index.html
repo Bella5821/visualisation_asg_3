@@ -1950,6 +1950,10 @@ map.on('load', e => {
     let buttons = document.querySelector('#buttons');
     buttons.appendChild(link);
     link.onclick = e => {
+      if(link.style.backgroundColor =='transparent'){
+        console.log(link.style.backgroundColor =='transparent');
+        link.style.backgroundColor = layer.color;
+      }else{link.style.backgroundColor ='transparent'};
       let clickedLayer = e.target.dataset.layerName;
       e.preventDefault();
       e.stopPropagation();
